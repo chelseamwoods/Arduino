@@ -1,0 +1,38 @@
+
+//copy all of this code into a new Arduino file and click send (the arrrow pointing right) to run the code 
+#include <Servo.h> 
+ 
+Servo lefty;  // create servo object (lefty) to control a servo 
+Servo righty; // a maximum of eight servo objects can be created 
+ 
+ int leftEye = 13; //left eye is in pin 13
+ int rightEye = 11; //right eye is in pin 11
+ 
+ int pos = 0;    // variable to store the servo position 
+ 
+void setup() 
+{ 
+  lefty.attach(9);  // attaches the servo on pin 9 to the servo object 
+  righty.attach(7); // attaches the servo on pin 7 to the servo object
+   pinMode(leftEye, OUTPUT);  //sets the pinmode for lefteye (pin 13) to output.
+   pinMode(rightEye, OUTPUT); //sets the pinmode for righteye to output.
+
+} 
+ 
+ 
+void loop() 
+{ //the code you put in here runs on a loop -indefinitely
+   
+ 
+
+   //this code makes the eyes blink
+    digitalWrite(leftEye, HIGH); //turn left eye on
+    digitalWrite(rightEye, HIGH); //turn right eye on
+    delay(1000); //make them stay on for 1000 milliseconds
+  
+    digitalWrite(leftEye, LOW); //turn left eye off
+    digitalWrite(rightEye, LOW);//turn right eye off
+    delay(1000); //stay off for 1000 milliseconds
+
+   
+} //this closes the loop.
